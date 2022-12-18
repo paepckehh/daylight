@@ -49,7 +49,6 @@ func State(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.
 	return sunrise, sunset, getnoon(pos, ts), sunset.Sub(sunrise).Round(1 * time.Second)
 }
 
-
 // StateExtended ...
 func StateExtended(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.Duration, bool, bool) {
 	longestDay, shortestDay := false, false
@@ -314,7 +313,7 @@ func time_of_transit(obs observer, date time.Time, zenith float64, direction sun
 	return dt, nil
 }
 
-func zenithAndazimuth(obs observer, dateandtime time.Time, with_refraction bool) (ze, az  float64) {
+func zenithAndazimuth(obs observer, dateandtime time.Time, with_refraction bool) (ze, az float64) {
 	latitude := obs.latitude
 	if obs.latitude > 89.8 {
 		latitude = 89.8
