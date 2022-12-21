@@ -4,6 +4,11 @@
 
 Set location, get information about sunrise, sunset, noon, daylight time. 
 
+## Install 
+```
+go install paepcke.de/daylight/cmd/daylight@latest
+```
+
 # Showtime 
 
 ## Set location via gps coordinates.
