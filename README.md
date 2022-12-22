@@ -1,15 +1,16 @@
-# Overview
+# OVERVIEW
 
 [paepche.de/daylight](https://paepcke.de/daylight)
 
 Set location, get information about sunrise, sunset, noon, daylight time. 
 
-## Install 
+# INSTALL
+
 ```
 go install paepcke.de/daylight/cmd/daylight@latest
 ```
 
-# Showtime 
+# SHOWTIME
 
 ## Set location via gps coordinates.
 ```Shell
@@ -42,3 +43,7 @@ export GPS_SUN_SET="09:21:26"
 export GPS_SUN_NOON="04:13:07"
 export GPS_SUN_DAYLIGHT="10h16m48s"
 ```
+
+# CONTRIBUTION
+
+Yes, Please! PRs Welcome! 
