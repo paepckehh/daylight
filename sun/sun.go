@@ -17,29 +17,6 @@ import (
 	"time"
 )
 
-//
-// EXTERNAL NEW INTERFACES
-//
-
-// GetState ...
-// func GetState(p coord) (d day) {
-// 	ts := time.Now()
-// 	pos := observer{p.latitude, p.longitude, p.elevation}
-// 	sunset, _ := getsunset(pos, ts)
-// 	sunrise, _ := getsunrise(pos, ts)
-// 	state := false
-// 	if sunrise.Sub(ts) < 0 || sunset.Sub(ts) > 0 {
-// 		state = true
-// 	}
-// 	return day{
-// 		sunrise:  sunrise,
-// 		sunset:   sunset,
-// 		noon:     getnoon(pos, ts),
-// 		dayLight: sunset.Sub(sunrise).Round(1 * time.Second),
-// 		current:  state,
-// 	}
-// }
-
 // State ...
 func State(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.Duration) {
 	ts := time.Now()
@@ -53,22 +30,22 @@ func State(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.
 func StateExtended(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.Duration, bool, bool) {
 	longestDay, shortestDay := false, false
 	ts := time.Now()
-	tsYesterday := ts.Add(-24 * time.Hour)
+	tsYesterday := ts.Add(24 * time.Hour)
 	tsTomorrow := ts.Add(24 * time.Hour)
 	pos := observer{lat, long, elevation}
 	sunrise, _ := getsunrise(pos, ts)
 	sunriseYesterday, _ := getsunrise(pos, tsYesterday)
 	sunriseTomorrow, _ := getsunrise(pos, tsTomorrow)
 	sunset, _ := getsunset(pos, ts)
-	sunsetYesterday, _ := getsunset(pos, tsTomorrow)
+	sunsetYesterday, _ := getsunset(pos, tsYesterday)
 	sunsetTomorrow, _ := getsunset(pos, tsTomorrow)
 	today := sunset.Sub(sunrise)
 	yesterday := sunsetYesterday.Sub(sunriseYesterday)
 	tomorrow := sunsetTomorrow.Sub(sunriseTomorrow)
 	switch {
-	case yesterday < today && tomorrow > today:
+	case yesterday < today && tomorrow < today:
 		longestDay = true
-	case yesterday < today && tomorrow > today:
+	case yesterday > today && tomorrow > today:
 		shortestDay = true
 	}
 	return sunrise, sunset, getnoon(pos, ts), today.Round(1 * time.Second), longestDay, shortestDay
