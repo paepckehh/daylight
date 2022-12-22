@@ -66,9 +66,9 @@ func StateExtended(lat, long, elevation float64) (time.Time, time.Time, time.Tim
 	yesterday := sunsetYesterday.Sub(sunriseYesterday)
 	tomorrow := sunsetTomorrow.Sub(sunriseTomorrow)
 	switch {
-	case yesterday < today && tomorrow < today:
+	case yesterday < today && tomorrow > today:
 		longestDay = true
-	case yesterday > today && tomorrow > today:
+	case yesterday < today && tomorrow > today:
 		shortestDay = true
 	}
 	return sunrise, sunset, getnoon(pos, ts), today.Round(1 * time.Second), longestDay, shortestDay
