@@ -1,14 +1,13 @@
-// package daylight ...
+// package daylight provides information about site local sunrise, sunset, daylight phase
 package daylight
 
-// import
 import (
 	"time"
 
 	"paepcke.de/daylight/sun"
 )
 
-// Location ...
+// Location holds the site configuration
 type Location struct {
 	Latitude    float64
 	Longitude   float64
@@ -21,22 +20,22 @@ type Location struct {
 	Daylight    time.Duration
 }
 
-// NewLocation ...
+// NewLocation provides an default location
 func NewLocation() *Location {
 	return &Location{}
 }
 
-// Daylight ...
+// Daylight calc site local data
 func Daylight(loc *Location) {
 	loc.Sunrise, loc.Sunset, loc.Noon, loc.Daylight, loc.LongestDay, loc.ShortestDay = sun.StateExtended(loc.Latitude, loc.Longitude, loc.Elevation)
 }
 
-// IsDay ...
+// IsDay responds true if site local is daylight phase 
 func IsDay(loc *Location) bool {
 	return sun.IsDay(loc.Latitude, loc.Longitude, loc.Elevation)
 }
 
-// Script ...
+// Script provides an unix env variable script
 func Script(loc *Location) {
 	opt := ""
 	if loc.LongestDay {
@@ -48,7 +47,7 @@ func Script(loc *Location) {
 	out("#!/bin/sh\nexport GPS_LAT=\"" + fl(loc.Latitude) + "\"\nexport GPS_LONG=\"" + fl(loc.Longitude) + "\"\nexport GPS_ELEVATION=\"" + fl(loc.Elevation) + "\"\nexport GPS_SUN_RISE=\"" + loc.Sunrise.Format(_ts) + "\"\nexport GPS_SUN_SET=\"" + loc.Sunset.Format(_ts) + "\"\nexport GPS_SUN_NOON=\"" + loc.Noon.Format(_ts) + "\"\nexport GPS_SUN_DAYLIGHT=\"" + loc.Daylight.String() + "\"" + opt)
 }
 
-// Display ...
+// Display prepares the information as ascii output files
 func Display(loc *Location) {
 	opt := ""
 	if loc.LongestDay {

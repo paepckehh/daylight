@@ -1,4 +1,6 @@
-// package sun ...
+// package sun is the internal backend
+// 
+// 
 // This is a [minimal|static|optimize] fork of the great [github.com/sj14/astral] pkg.
 // This fork is adapted and optimized for an specific use-case and *is not* api/result
 // compatible with the original. Please do not use outside very specific use cases!.
