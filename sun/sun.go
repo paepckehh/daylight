@@ -1,7 +1,9 @@
 // package sun is the internal backend
-// 
-// 
-// This is a [minimal|static|optimize] fork of the great [github.com/sj14/astral] pkg.
+//
+//
+// The backend part below is a  [minimal|static|optimize] fork of [github.com/sj14/astral].
+// [github.com/sj14/astral] is [forked|inspired-by] [github.com/sffjunkie/astral]
+//
 // This fork is adapted and optimized for an specific use-case and *is not* api/result
 // compatible with the original. Please do not use outside very specific use cases!.
 //
@@ -19,7 +21,7 @@ import (
 	"time"
 )
 
-// State ...
+// State provides sunrise, noon, sunset and  daylight
 func State(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.Duration) {
 	ts := time.Now()
 	pos := observer{lat, long, elevation}
@@ -28,13 +30,13 @@ func State(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.
 	return sunrise, sunset, getnoon(pos, ts), sunset.Sub(sunrise).Round(1 * time.Second)
 }
 
-// StateExtended ...
+// StateExtended provides sunrise, noon, sunset, daylight and an optional fact (longest/shortest/...)
 func StateExtended(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.Duration, bool, bool) {
 	longestDay, shortestDay := false, false
-	ts := time.Now()
-	tsYesterday := ts.Add(24 * time.Hour)
-	tsTomorrow := ts.Add(24 * time.Hour)
 	pos := observer{lat, long, elevation}
+	ts := time.Now()
+	tsTomorrow := ts.Add(24 * time.Hour)
+	tsYesterday := ts.Add(-24 * time.Hour)
 	sunrise, _ := getsunrise(pos, ts)
 	sunriseYesterday, _ := getsunrise(pos, tsYesterday)
 	sunriseTomorrow, _ := getsunrise(pos, tsTomorrow)

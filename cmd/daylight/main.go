@@ -1,7 +1,5 @@
-// package main ...
 package main
 
-// import
 import (
 	"os"
 
@@ -9,7 +7,6 @@ import (
 	"paepcke.de/daylight"
 )
 
-// main ...
 func main() {
 	var err error
 	loc := daylight.NewLocation()
@@ -37,19 +34,13 @@ func main() {
 }
 
 //
-// DISPLAY
+// LITTLE HELPER
 //
 
-// out ...
 func out(message string) {
 	os.Stdout.Write([]byte(message + "\n"))
 }
 
-//
-// LITTLE HELPER
-//
-
-// isTrue ...
 func isTrue(in bool) string {
 	if in {
 		return "true"

@@ -2,7 +2,10 @@
 
 [paepche.de/daylight](https://paepcke.de/daylight)
 
-Set location, get information about sunrise, sunset, noon, daylight time. 
+Need to collaborate in an worldwide distributed team?
+You (or your chatbot) need to know local daylight (availibility) times? 
+
+100% pure golang, minimal imports. Use it as app or api (see api.go)
 
 # INSTALL
 
@@ -10,7 +13,7 @@ Set location, get information about sunrise, sunset, noon, daylight time.
 go install paepcke.de/daylight/cmd/daylight@latest
 ```
 
-# SHOWTIME
+# SHOWTIME (APP)
 
 ## Set location via gps coordinates.
 ```Shell
@@ -25,10 +28,16 @@ IATA=TXL daylight
 Sunrise: 04:00:39 || Sunset 18:37:09 || Noon: 11:18:23 || Daylight: 14h36m30s
 ```
 
-## Ask if we have daylight @ location
+## Ask if we have daylight @ Berlin 
 ```
-IATA=XFW daylight ask
+IATA=BER daylight ask
 true
+```
+
+## Ask if we have daylight @ Perth 
+```
+IATA=PER daylight ask
+false
 ```
 
 ## Set Shell env variablesv via 3 letter Airport code

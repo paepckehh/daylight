@@ -30,7 +30,7 @@ func Daylight(loc *Location) {
 	loc.Sunrise, loc.Sunset, loc.Noon, loc.Daylight, loc.LongestDay, loc.ShortestDay = sun.StateExtended(loc.Latitude, loc.Longitude, loc.Elevation)
 }
 
-// IsDay responds true if site local is daylight phase 
+// IsDay responds true if site local is daylight phase
 func IsDay(loc *Location) bool {
 	return sun.IsDay(loc.Latitude, loc.Longitude, loc.Elevation)
 }
