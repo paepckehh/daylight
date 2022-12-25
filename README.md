@@ -3,9 +3,11 @@
 [paepche.de/daylight](https://paepcke.de/daylight)
 
 Need to collaborate in an worldwide distributed team?
-You (or your chatbot) need to know local daylight (availibility) times? 
+You (or your chatbot/lib) need to know local daylight 
+(availibility) times? 
 
-100% pure golang, minimal imports. Use it as app or api (see api.go)
+100% pure golang, lib/api has no external dependencies 
+Example app has one. Use it as APP or api (see api.go).
 
 # INSTALL
 
@@ -52,6 +54,10 @@ export GPS_SUN_SET="09:21:26"
 export GPS_SUN_NOON="04:13:07"
 export GPS_SUN_DAYLIGHT="10h16m48s"
 ```
+
+# INTERNAL BACKEND 
+
+see pkg sun/sun.go, based on a minimized and adapted static fork of [github.com/sj14/astral](https://github.com/sj14/astral), a fork of [github.com/sffjunkie/astral](https://github.com/sffjunkie/astral)
 
 # CONTRIBUTION
 
