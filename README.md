@@ -9,6 +9,11 @@ You (or your chatbot/lib) need to know local daylight
 100% pure golang, lib/api has no external dependencies 
 Example app has one. Use it as APP or api (see api.go).
 
+Backend is a minimized, boiled down and heavy adapted static
+fork of [github.com/sj14/astral](https://github.com/sj14/astral), 
+who is afork of [github.com/sffjunkie/astral](https://github.com/sffjunkie/astral).
+see pkg sun/sun.go for details (***ALL CREDITS GOES TO THE AUTHOR(S)***)
+
 # INSTALL
 
 ```
@@ -54,10 +59,6 @@ export GPS_SUN_SET="09:21:26"
 export GPS_SUN_NOON="04:13:07"
 export GPS_SUN_DAYLIGHT="10h16m48s"
 ```
-
-# INTERNAL BACKEND 
-
-see pkg sun/sun.go, based on a minimized and adapted static fork of [github.com/sj14/astral](https://github.com/sj14/astral), a fork of [github.com/sffjunkie/astral](https://github.com/sffjunkie/astral)
 
 # CONTRIBUTION
 
