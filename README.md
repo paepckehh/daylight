@@ -20,6 +20,10 @@ see pkg sun/sun.go for details (***ALL CREDITS GOES TO THE AUTHOR(S)***)
 go install paepcke.de/daylight/cmd/daylight@latest
 ```
 
+# DOWNLOAD (prebuild)
+
+[github.com/paepckehh/daylight/releases](https://github.com/paepckehh/daylight/releases)
+
 # SHOWTIME (APP)
 
 ## Set location via gps coordinates.
