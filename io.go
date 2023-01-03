@@ -20,10 +20,3 @@ func out(message string) {
 //
 
 func fl(in float64) string { return strconv.FormatFloat(in, 'f', -1, 64) }
-
-func isTrue(in bool) string {
-	if in {
-		return "true"
-	}
-	return "false"
-}

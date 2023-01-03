@@ -76,13 +76,6 @@ type coord struct {
 	longitude float64
 	elevation float64
 }
-type day struct {
-	sunrise  time.Time
-	sunset   time.Time
-	noon     time.Time
-	dayLight time.Duration
-	current  bool
-}
 
 const (
 	_sunApperentRadius                   = 32.0 / (60.0 * 2.0)
