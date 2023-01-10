@@ -60,6 +60,10 @@ export GPS_SUN_NOON="04:13:07"
 export GPS_SUN_DAYLIGHT="10h16m48s"
 ```
 
+# DOCS
+
+[pkg.go.dev/paepcke.de/daylight](https://pkg.go.dev/paepcke.de/daylight)
+
 # CONTRIBUTION
 
 Yes, Please! PRs Welcome! 
