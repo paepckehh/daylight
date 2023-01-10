@@ -1,6 +1,6 @@
 # OVERVIEW
 
-[paepche.de/daylight](https://paepcke.de/daylight)
+[paepche.de/daylight](https://paepcke.de/daylight/)
 
 Need to collaborate in an worldwide distributed team?
 You (or your chatbot/lib) need to know local daylight 
