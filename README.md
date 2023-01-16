@@ -1,5 +1,5 @@
 # OVERVIEW
-[![Go Report Card](https://goreportcard.com/badge/paepcke.de/daylight)](https://goreportcard.com/report/paepcke.de/daylight)
+[![Go Reference](https://pkg.go.dev/badge/paepcke.de/daylight.svg)](https://pkg.go.dev/paepcke.de/daylight) [![Go Report Card](https://goreportcard.com/badge/paepcke.de/daylight)](https://goreportcard.com/report/paepcke.de/daylight)
 
 [paepche.de/daylight](https://paepcke.de/daylight/)
 
