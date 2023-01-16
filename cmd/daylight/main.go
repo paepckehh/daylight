@@ -25,7 +25,7 @@ func main() {
 			out(isTrue(daylight.IsDay(loc)))
 			return
 		default:
-			out("error: unkown option, syntax: daylight [optional:unix|ask]")
+			out("error: unknown option, syntax: daylight [optional:unix|ask]")
 			os.Exit(1)
 		}
 	}
