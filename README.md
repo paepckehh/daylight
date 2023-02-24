@@ -1,7 +1,10 @@
 # OVERVIEW
 [![Go Reference](https://pkg.go.dev/badge/paepcke.de/daylight.svg)](https://pkg.go.dev/paepcke.de/daylight) [![Go Report Card](https://goreportcard.com/badge/paepcke.de/daylight)](https://goreportcard.com/report/paepcke.de/daylight) [![Go Build](https://github.com/paepckehh/daylight/actions/workflows/golang.yml/badge.svg)](https://github.com/paepckehh/daylight/actions/workflows/golang.yml)
 
-[paepche.de/daylight](https://paepcke.de/daylight/)
+
+![ai_generated_cat_in_front_of_a_sunrise](https://github.com/paepckehh/paepckehh/raw/main/artwork/daylightXS.png)
+
+[paepcke.de/daylight](https://paepcke.de/daylight/)
 
 Need to collaborate in an worldwide distributed team?
 You (or your chatbot/lib) need to know local daylight 
