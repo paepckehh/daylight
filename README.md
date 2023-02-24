@@ -1,14 +1,15 @@
 # OVERVIEW
 [![Go Reference](https://pkg.go.dev/badge/paepcke.de/daylight.svg)](https://pkg.go.dev/paepcke.de/daylight) [![Go Report Card](https://goreportcard.com/badge/paepcke.de/daylight)](https://goreportcard.com/report/paepcke.de/daylight) [![Go Build](https://github.com/paepckehh/daylight/actions/workflows/golang.yml/badge.svg)](https://github.com/paepckehh/daylight/actions/workflows/golang.yml)
 
+Do you need to collaborate in a worldwide distributed team?
 
 ![ai_generated_cat_in_front_of_a_sunrise](https://github.com/paepckehh/paepckehh/raw/main/artwork/daylightXS.png)
 
 [paepcke.de/daylight](https://paepcke.de/daylight/)
 
-Need to collaborate in an worldwide distributed team?
-You (or your chatbot/lib) need to know local daylight 
-(availibility) times? 
+The human brainstem will always adjust performance according to available
+daylight. If you want your team to perform optimally, take into account the
+local available daylight, disregarding artificial time zones and banking hours.
 
 100% pure golang, lib/api has no external dependencies 
 Example app has one. Use it as APP or api (see api.go).
