@@ -1,5 +1,5 @@
 module paepcke.de/daylight
 
-go 1.21
+go 1.23.6
 
-require paepcke.de/airloctag v0.1.24
+require paepcke.de/airloctag v0.2.0

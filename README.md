@@ -11,13 +11,18 @@ The human brainstem will always adjust performance according to available
 daylight. If you want your team to perform optimally, take into account the
 local available daylight, disregarding artificial time zones and banking hours.
 
-100% pure golang, lib/api has no external dependencies 
-Example app has one. Use it as APP or api (see api.go).
+100% pure golang, lib/api has no external dependencies or imports. 
 
 Backend is a minimized, boiled down and heavy adapted static
 fork of [github.com/sj14/astral](https://github.com/sj14/astral), 
 who is afork of [github.com/sffjunkie/astral](https://github.com/sffjunkie/astral).
 see pkg sun/sun.go for details (***ALL CREDITS GOES TO THE AUTHOR(S)***)
+
+# RUN
+
+```
+IATA=BER go install paepcke.de/daylight/cmd/daylight@latest
+```
 
 # INSTALL
 
@@ -32,14 +37,14 @@ go install paepcke.de/daylight/cmd/daylight@latest
 
 ## Set location via gps coordinates.
 ```Shell
-GSP_LAT=53.564432 GPS_LONG=9.95118 daylight 
+GPS_LAT=53.564432 GPS_LONG=9.95118 daylight 
 Sunrise: 04:00:39 || Sunset 18:37:09 || Noon: 11:18:23 || Daylight: 14h36m30s
 
 ```
 
 ## Set location via nearest 3 letter Airport code.
 ```Shell
-IATA=TXL daylight 
+IATA=BER daylight 
 Sunrise: 04:00:39 || Sunset 18:37:09 || Noon: 11:18:23 || Daylight: 14h36m30s
 ```
 
