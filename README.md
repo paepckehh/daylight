@@ -13,10 +13,10 @@ local available daylight, disregarding artificial time zones and banking hours.
 
 100% pure golang, lib/api has no external dependencies or imports. 
 
-Backend is a minimized, boiled down and heavy adapted static
-fork of [github.com/sj14/astral](https://github.com/sj14/astral), 
-who is afork of [github.com/sffjunkie/astral](https://github.com/sffjunkie/astral).
-see pkg sun/sun.go for details (***ALL CREDITS GOES TO THE AUTHOR(S)***)
+Backend is a minimized, boiled down internal and heavy adapted static
+refactored fork of [github.com/sj14/astral](https://github.com/sj14/astral), 
+who was forked from [github.com/sffjunkie/astral](https://github.com/sffjunkie/astral).
+See pkg sun/sun.go for details (ALL CREDITS GOES TO THE AUTHOR(S))
 
 # RUN
 

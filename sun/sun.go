@@ -21,6 +21,10 @@ import (
 	"time"
 )
 
+//
+// EXTERNAL NEW INTERFACES
+//
+
 // State provides sunrise, noon, sunset and  daylight
 func State(lat, long, elevation float64) (time.Time, time.Time, time.Time, time.Duration) {
 	ts := time.Now()
